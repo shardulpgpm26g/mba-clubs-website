@@ -1,0 +1,273 @@
+/* --- General Styles & Variables --- */
+:root {
+    --primary-color: #f56565;
+    --dark-text: #2d3748;
+    --light-text: #718096;
+    --orange-color: #dd6b20;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px; /* Prevents sticky header from covering titles */
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: white;
+    color: var(--dark-text);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.section-title {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: var(--dark-text);
+}
+
+section .subtitle {
+    font-size: 18px;
+    color: var(--light-text);
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary {
+    background-color: var(--orange-color);
+    color: white;
+    border: 1px solid var(--orange-color);
+}
+
+.btn-secondary {
+    background-color: white;
+    color: var(--orange-color);
+    border: 1px solid var(--orange-color);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.btn.btn-light {
+    background-color: white;
+    color: var(--orange-color);
+}
+
+/* --- Header & Navigation --- */
+.main-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    padding: 15px 0;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--dark-text);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+}
+
+/* REVISED Base style for all nav links */
+.nav-links a {
+    text-decoration: none;
+    color: var(--light-text);
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 6px;
+    border-bottom: 2px solid transparent;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+/* REVISED Hover style for non-active links */
+.nav-links a:hover {
+    color: var(--dark-text);
+    background-color: #f8fafc;
+}
+
+/* REVISED style for the active link */
+.nav-links a.active {
+    color: var(--orange-color);
+    background-color: #fffaf0;
+    border-bottom-color: transparent;
+}
+
+/* --- Hero & Homepage Sections --- */
+.hero-section { padding: 80px 0; }
+.hero-section h1 { font-size: 52px; font-weight: 700; margin: 0 0 20px 0; line-height: 1.2; }
+.hero-section .subtitle { max-width: 650px; }
+.cta-buttons { display: flex; justify-content: center; gap: 20px; }
+.stats-section { padding: 60px 0 100px 0; }
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
+.stat-card { background-color: white; padding: 25px; border-radius: 12px; box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07); text-align: center; }
+.icon-wrapper { margin-bottom: 15px; }
+.stat-number { display: block; font-size: 36px; font-weight: 700; }
+.stat-label { font-size: 16px; color: var(--light-text); margin: 0; }
+.icon-wrapper.color-orange svg { color: #dd6b20; }
+.icon-wrapper.color-blue svg { color: #3182ce; }
+.icon-wrapper.color-yellow svg { color: #d69e2e; }
+.icon-wrapper.color-purple svg { color: #805ad5; }
+
+/* --- Homepage Events & Testimonials --- */
+.homepage-events-section { padding: 80px 0; background-color: #f8fafc; }
+.homepage-events-section .section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+.homepage-events-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.homepage-event-card { background-color: white; border: 1px solid #e2e8f0; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); overflow: hidden; display: flex; flex-direction: column; }
+.homepage-event-card img { width: 100%; height: 200px; object-fit: cover; }
+.homepage-event-card .card-content { padding: 20px; flex-grow: 1; }
+.homepage-event-card h3 { margin: 5px 0 10px 0; }
+.homepage-event-card .event-date { font-size: 14px; color: var(--light-text); margin-bottom: 15px; }
+.register-link { display: block; text-align: center; padding: 12px; margin: 0 20px 20px 20px; border: 1px solid var(--orange-color); color: var(--orange-color); border-radius: 6px; text-decoration: none; font-weight: 600; transition: background-color 0.2s, color 0.2s; }
+.register-link:hover { background-color: var(--orange-color); color: white; }
+.testimonials-section { padding: 80px 0; }
+.testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 50px; text-align: left; }
+.testimonial-card { background: #f8fafc; border: 1px solid #e2e8f0; padding: 25px; border-radius: 12px; }
+.author-info { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
+.author-info img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; }
+.author-info strong { display: block; font-size: 18px; }
+.author-info p { margin: 2px 0 0 0; color: var(--light-text); font-size: 14px; }
+.author-info span { display: block; font-weight: 500; }
+.testimonial-card .quote { font-size: 16px; line-height: 1.6; color: var(--dark-text); font-style: italic; }
+.cta-banner-section { background-color: var(--orange-color); color: white; padding: 80px 0; text-align: center; }
+.cta-banner-section h2 { font-size: 36px; margin: 0 0 15px 0; }
+.cta-banner-section p { font-size: 18px; max-width: 600px; margin: 0 auto 30px auto; opacity: 0.9; }
+
+/* --- Clubs Page --- */
+.clubs-section { padding: 80px 0; }
+.clubs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.club-card { background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 30px; display: flex; flex-direction: column; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.3s, box-shadow 0.3s; border-top-width: 4px; border-top-style: solid; }
+.club-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px rgba(0,0,0,0.1); }
+.card-icon { width: 24px; height: 24px; border: 2px solid #cbd5e1; border-radius: 50%; margin-bottom: 20px; }
+.club-card h3 { font-size: 22px; font-weight: 600; margin: 0 0 5px 0; }
+.club-card .tagline { font-size: 14px; font-weight: 500; margin: 0 0 15px 0; }
+.club-card .description { font-size: 15px; color: var(--light-text); line-height: 1.6; flex-grow: 1; }
+.learn-more { color: var(--dark-text); text-decoration: none; font-weight: 600; align-self: flex-start; }
+.learn-more:hover { text-decoration: underline; }
+
+/* --- Gallery Page (Overlay Removed) --- */
+.gallery-section { padding: 80px 0; }
+.gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; }
+.gallery-item { background-color: white; border: 1px solid #e2e8f0; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); overflow: hidden; display: flex; flex-direction: column; }
+.image-container { position: relative; cursor: pointer; }
+.image-container img { width: 100%; height: 220px; object-fit: cover; display: block; }
+.item-label { padding: 15px; font-weight: 500; }
+
+/* --- About Page (Revised) --- */
+.about-section { padding: 80px 0; }
+.mission-vision-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 50px; }
+.info-card { padding: 30px; border-radius: 12px; }
+.info-card h3 { font-size: 24px; margin-top: 0; }
+.mission-card { background-color: #fffaf0; border: 1px solid #fed7aa; }
+.vision-card { background-color: #ecfeff; border: 1px solid #a5f3fc; }
+.impact-section { background-color: #f8fafc; border-radius: 12px; padding: 40px 20px; margin: 80px 0; text-align: center; }
+.impact-stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 30px; }
+.impact-stat .stat-number { font-size: 48px; font-weight: 700; }
+.impact-stat .stat-label { color: var(--light-text); margin-top: 5px; }
+.core-values-section { margin: 80px 0; }
+.values-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-top: 50px; }
+.value-card { background-color: white; padding: 30px; border-radius: 12px; box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07); text-align: center; transition: transform 0.2s, box-shadow 0.2s; }
+.value-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); }
+.value-icon { margin-bottom: 20px; color: var(--orange-color); }
+.value-card h3 { margin: 0 0 10px 0; }
+.value-card p { color: var(--light-text); line-height: 1.6; }
+
+/* --- Forms & Contact/Join Pages (Revised) --- */
+.contact-section, .join-us-section, .resources-section { padding: 80px 0; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1.7fr; gap: 50px; margin-top: 50px; }
+.contact-info { background-color: #f8fafc; padding: 40px; border-radius: 12px; }
+.info-block { display: flex; align-items: flex-start; gap: 20px; margin-bottom: 25px; }
+.info-block h4 { margin: 0 0 5px 0; font-size: 18px; color: var(--dark-text); }
+.info-block p { margin: 0; color: var(--light-text); line-height: 1.6; }
+.contact-form-container { background-color: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 40px; box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07); }
+form input, form select, form textarea { width: 100%; padding: 12px; border: 1px solid #e2e8f0; border-radius: 6px; font-family: 'Poppins', sans-serif; font-size: 15px; background-color: #f8fafc; transition: border-color 0.2s, box-shadow 0.2s; }
+form input:focus, form select:focus, form textarea:focus { outline: none; border-color: var(--orange-color); box-shadow: 0 0 0 3px rgba(221, 107, 32, 0.2); }
+form .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+form .form-group { margin-bottom: 20px; }
+form label { display: block; margin-bottom: 8px; font-weight: 600; }
+.submit-btn { width: 100%; padding: 15px; display: flex; justify-content: center; align-items: center; gap: 10px; font-size: 16px; }
+.application-form-container { max-width: 900px; margin: 50px auto 0 auto; background-color: white; border: 1px solid #e2e8f0; border-radius: 16px; padding: 40px 50px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07); }
+form fieldset { border: 1px solid #e2e8f0; background-color: #f8fafc; border-radius: 8px; padding: 20px; margin: 0 0 30px 0; }
+form legend { font-size: 18px; padding: 0 10px; margin-left: -10px; font-weight: 600; }
+.club-selection-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.club-checkbox-card { display: block; border: 1px solid #e2e8f0; background: white; border-radius: 8px; padding: 15px; cursor: pointer; transition: border-color 0.2s, box-shadow 0.2s; }
+.club-checkbox-card:hover { border-color: #a5b4fc; box-shadow: 0 0 0 3px rgba(165, 180, 252, 0.2); }
+.club-checkbox-card .card-content { display: flex; align-items: flex-start; gap: 12px; }
+.club-checkbox-card input[type="checkbox"] { display: none; }
+.checkbox-visual { flex-shrink: 0; width: 20px; height: 20px; border: 2px solid #cbd5e1; border-radius: 4px; margin-top: 2px; transition: background-color 0.2s, border-color 0.2s; }
+.club-checkbox-card input:checked ~ .card-content .checkbox-visual { background-color: var(--orange-color); border-color: var(--orange-color); background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e"); }
+.form-actions { display: flex; justify-content: flex-end; gap: 15px; margin-top: 20px; }
+.features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 60px; max-width: 1000px; margin-left: auto; margin-right: auto; }
+.feature-card { background: white; border: 1px solid #e2e8f0; padding: 30px; border-radius: 12px; text-align: center; }
+.feature-card h3 { font-size: 24px; margin: 0 0 10px 0; }
+.feature-card p { margin: 0; color: var(--light-text); }
+.color-orange { color: #dd6b20; }
+.color-cyan { color: #06b6d4; }
+.color-yellow { color: #d69e2e; }
+.color-purple { color: #805ad5; }
+.color-red { color: #ef4444; }
+.color-green { color: #84cc16; }
+
+/* --- Footer --- */
+.main-footer { background-color: #1a202c; color: #a0aec0; padding: 60px 0 20px 0; }
+.footer-top { display: grid; grid-template-columns: 2fr 1fr 1.5fr 1fr; gap: 40px; margin-bottom: 40px; }
+.footer-column h4 { color: white; font-size: 16px; margin-bottom: 20px; }
+.footer-column.about p { line-height: 1.6; }
+.footer-column ul { list-style: none; padding: 0; margin: 0; }
+.footer-column li { margin-bottom: 10px; }
+.footer-column a { color: #a0aec0; text-decoration: none; transition: color 0.2s; }
+.footer-column a:hover { color: white; }
+.footer-column.contact li { display: flex; align-items: flex-start; gap: 10px; }
+.social-icons { display: flex; gap: 15px; }
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 20px; border-top: 1px solid #2d3748; font-size: 14px; }
+.legal-links a { margin-left: 20px; }
+
+/* --- Responsive Styles --- */
+@media (max-width: 992px) {
+    .stats-grid, .clubs-grid, .homepage-events-grid, .testimonials-grid, .gallery-grid, .values-grid, .impact-stats-grid, .features-grid, .footer-top { grid-template-columns: 1fr 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+    .nav-links { display: none; } /* On a real site, this would be replaced by a hamburger menu */
+    .stats-grid, .clubs-grid, .homepage-events-grid, .testimonials-grid, .gallery-grid, .values-grid, .impact-stats-grid, .features-grid, .footer-top, .mission-vision-grid, .form-row, .club-selection-grid { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; text-align: center; gap: 10px; }
+    .legal-links { display: flex; gap: 15px; margin-left: 0; }
+    .legal-links a { margin-left: 0; }
+}

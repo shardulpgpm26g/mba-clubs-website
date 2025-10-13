@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Clubs of Great Lakes</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <nav class="main-nav">
+                <a href="index.html" class="logo">Clubs of Great Lakes</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="clubs.html">Clubs</a></li>
+                    <li><a href="events.html" class="active">Events</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <a href="join.html" class="btn btn-primary">Join Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="events-section" style="padding: 80px 0;">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-title">Upcoming Events</h2>
+                    <p class="subtitle">Join us for workshops, seminars, competitions, and networking events.</p>
+                </div>
+
+                <div class="event-filters">
+                    <button class="filter-btn active">All Events</button>
+                    <button class="filter-btn">Strategy & Consulting</button>
+                    <button class="filter-btn">Marquest</button>
+                    <button class="filter-btn">Economia</button>
+                    <button class="filter-btn">Self Interest Club</button>
+                    <button class="filter-btn">Inquivista</button>
+                    <button class="filter-btn">Opus</button>
+                </div>
+
+                <div class="events-grid" style="grid-template-columns: repeat(3, 1fr); display: grid; gap: 30px;">
+                    <div class="event-card" style="display: flex; flex-direction: column;"><img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200" alt="Audience at a conference"><div class="card-content" style="flex-grow: 1; display: flex; flex-direction: column;"><div class="card-meta"><span class="tag tag-purple">Strategy & Consulting</span><span class="attendees"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>156</span></div><h3>MBA Industry Connect Summit</h3><div class="event-details"><p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>October 15, 2025</p><p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>10:00 AM - 4:00 PM</p><p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Main Auditorium</p></div><p class="description" style="flex-grow: 1;">Network with industry leaders and explore consulting career paths.</p></div><a href="#" class="btn btn-primary register-btn">Register Now</a></div>
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        </footer>
+</body>
+</html>

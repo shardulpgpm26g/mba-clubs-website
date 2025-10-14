@@ -6,20 +6,22 @@
     <title>Contact Us - Clubs of Great Lakes</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q86YP8K757"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MQMZEJXQTZ"></script>
     <script>
-       window.dataLayer = window.dataLayer || [];
-       function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-Q86YP8K757');
-</script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MQMZEJXQTZ');
+    </script>
 </head>
 <body>
     <header class="main-header">
         <div class="container">
             <nav class="main-nav">
-                <a href="index.html" class="logo">Clubs of Great Lakes</a>
+                <a href="index.html" class="logo">
+                    <img src="logo.png" alt="Clubs of Great Lakes Logo">
+                    <span>Clubs of Great Lakes</span>
+                </a>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="clubs.html">Clubs</a></li>
@@ -52,7 +54,7 @@
                             <div class="info-text"><h4>Phone</h4><p>+91 98765 43210</p></div>
                         </div>
                         <div class="info-block">
-                            <div class="info-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s--6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+                            <div class="info-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
                             <div class="info-text"><h4>Location</h4><p>Great Lakes Institute of Management, Bhora Kalan, Haryana</p></div>
                         </div>
                         <div class="info-block" style="margin-bottom: 0;">
@@ -61,20 +63,20 @@
                         </div>
                     </div>
                     <div class="contact-form-container">
-                        <form>
+                        <form name="contact" data-netlify="true">
                             <h3>Send us a Message</h3>
                             <p style="color: var(--light-text); margin-bottom: 30px;">Fill out the form below and we'll get back to you shortly</p>
                             <div class="form-row">
-                                <div class="form-group"><label for="name">Your Name *</label><input type="text" id="name" placeholder="Enter your name" required></div>
-                                <div class="form-group"><label for="email">Email Address *</label><input type="email" id="email" placeholder="your.email@college.edu" required></div>
+                                <div class="form-group"><label for="name">Your Name *</label><input type="text" id="name" name="name" placeholder="Enter your name" required></div>
+                                <div class="form-group"><label for="email">Email Address *</label><input type="email" id="email" name="email" placeholder="your.email@college.edu" required></div>
                             </div>
                             <div class="form-group">
                                 <label for="subject">Subject *</label>
-                                <select id="subject" required><option value="" disabled selected>Select a subject</option><option>General Inquiry</option><option>Event Information</option><option>Membership</option></select>
+                                <select id="subject" name="subject" required><option value="" disabled selected>Select a subject</option><option>General Inquiry</option><option>Event Information</option><option>Membership</option></select>
                             </div>
                             <div class="form-group">
                                 <label for="message">Message *</label>
-                                <textarea id="message" rows="6" placeholder="Tell us what's on your mind..." required></textarea>
+                                <textarea id="message" name="message" rows="6" placeholder="Tell us what's on your mind..." required></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary submit-btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>Send Message</button>
                         </form>

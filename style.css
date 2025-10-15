@@ -8,7 +8,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 90px; /* Prevents sticky header from covering titles */
+    scroll-padding-top: 100px; /* Adjusted for new header height */
 }
 
 body {
@@ -24,56 +24,7 @@ body {
     padding: 0 20px;
 }
 
-.text-center {
-    text-align: center;
-}
-
-.section-title {
-    font-size: 36px;
-    margin-bottom: 15px;
-    color: var(--dark-text);
-}
-
-section .subtitle {
-    font-size: 18px;
-    color: var(--light-text);
-    max-width: 800px;
-    margin: 0 auto 50px auto;
-}
-
-/* --- Buttons --- */
-.btn {
-    display: inline-block;
-    padding: 12px 24px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.btn-primary {
-    background-color: var(--orange-color);
-    color: white;
-    border: 1px solid var(--orange-color);
-}
-
-.btn-secondary {
-    background-color: white;
-    color: var(--orange-color);
-    border: 1px solid var(--orange-color);
-}
-
-.btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.btn.btn-light {
-    background-color: white;
-    color: var(--orange-color);
-}
-
-/* --- Header & Navigation --- */
+/* --- Header & Navigation (FINAL LOGO STYLES) --- */
 .main-header {
     position: sticky;
     top: 0;
@@ -82,7 +33,7 @@ section .subtitle {
     background-color: white;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    padding: 15px 0;
+    padding: 10px 0;
 }
 
 .main-nav {
@@ -92,10 +43,22 @@ section .subtitle {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Adds space between the logo and the text */
+    text-decoration: none;
+}
+
+.logo img {
+    height: 60px; /* Controls the height of your logo */
+    width: auto;
+}
+
+/* This is the new rule that was missing */
+.logo span {
     font-size: 24px;
     font-weight: 700;
     color: var(--dark-text);
-    text-decoration: none;
 }
 
 .nav-links {
@@ -106,31 +69,34 @@ section .subtitle {
     gap: 15px;
 }
 
-/* REVISED Base style for all nav links */
 .nav-links a {
     text-decoration: none;
     color: var(--light-text);
     font-weight: 500;
     padding: 8px 15px;
     border-radius: 6px;
-    border-bottom: 2px solid transparent;
     transition: background-color 0.2s, color 0.2s;
 }
 
-/* REVISED Hover style for non-active links */
 .nav-links a:hover {
     color: var(--dark-text);
     background-color: #f8fafc;
 }
 
-/* REVISED style for the active link */
 .nav-links a.active {
     color: var(--orange-color);
     background-color: #fffaf0;
-    border-bottom-color: transparent;
 }
 
-/* --- Hero & Homepage Sections --- */
+/* --- (The rest of your CSS remains the same) --- */
+.text-center { text-align: center; }
+.section-title { font-size: 36px; margin-bottom: 15px; color: var(--dark-text); }
+section .subtitle { font-size: 18px; color: var(--light-text); max-width: 800px; margin: 0 auto 50px auto; }
+.btn { display: inline-block; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 600; transition: transform 0.2s, box-shadow 0.2s; }
+.btn-primary { background-color: var(--orange-color); color: white; border: 1px solid var(--orange-color); }
+.btn-secondary { background-color: white; color: var(--orange-color); border: 1px solid var(--orange-color); }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+.btn.btn-light { background-color: white; color: var(--orange-color); }
 .hero-section { padding: 80px 0; }
 .hero-section h1 { font-size: 52px; font-weight: 700; margin: 0 0 20px 0; line-height: 1.2; }
 .hero-section .subtitle { max-width: 650px; }
@@ -145,8 +111,6 @@ section .subtitle {
 .icon-wrapper.color-blue svg { color: #3182ce; }
 .icon-wrapper.color-yellow svg { color: #d69e2e; }
 .icon-wrapper.color-purple svg { color: #805ad5; }
-
-/* --- Homepage Events & Testimonials --- */
 .homepage-events-section { padding: 80px 0; background-color: #f8fafc; }
 .homepage-events-section .section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
 .homepage-events-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
@@ -169,8 +133,6 @@ section .subtitle {
 .cta-banner-section { background-color: var(--orange-color); color: white; padding: 80px 0; text-align: center; }
 .cta-banner-section h2 { font-size: 36px; margin: 0 0 15px 0; }
 .cta-banner-section p { font-size: 18px; max-width: 600px; margin: 0 auto 30px auto; opacity: 0.9; }
-
-/* --- Clubs Page --- */
 .clubs-section { padding: 80px 0; }
 .clubs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
 .club-card { background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 30px; display: flex; flex-direction: column; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.3s, box-shadow 0.3s; border-top-width: 4px; border-top-style: solid; }
@@ -181,16 +143,12 @@ section .subtitle {
 .club-card .description { font-size: 15px; color: var(--light-text); line-height: 1.6; flex-grow: 1; }
 .learn-more { color: var(--dark-text); text-decoration: none; font-weight: 600; align-self: flex-start; }
 .learn-more:hover { text-decoration: underline; }
-
-/* --- Gallery Page (Overlay Removed) --- */
 .gallery-section { padding: 80px 0; }
 .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; }
 .gallery-item { background-color: white; border: 1px solid #e2e8f0; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); overflow: hidden; display: flex; flex-direction: column; }
 .image-container { position: relative; cursor: pointer; }
 .image-container img { width: 100%; height: 220px; object-fit: cover; display: block; }
 .item-label { padding: 15px; font-weight: 500; }
-
-/* --- About Page (Revised) --- */
 .about-section { padding: 80px 0; }
 .mission-vision-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 50px; }
 .info-card { padding: 30px; border-radius: 12px; }
@@ -208,8 +166,6 @@ section .subtitle {
 .value-icon { margin-bottom: 20px; color: var(--orange-color); }
 .value-card h3 { margin: 0 0 10px 0; }
 .value-card p { color: var(--light-text); line-height: 1.6; }
-
-/* --- Forms & Contact/Join Pages (Revised) --- */
 .contact-section, .join-us-section, .resources-section { padding: 80px 0; }
 .contact-grid { display: grid; grid-template-columns: 1fr 1.7fr; gap: 50px; margin-top: 50px; }
 .contact-info { background-color: #f8fafc; padding: 40px; border-radius: 12px; }
@@ -244,8 +200,6 @@ form legend { font-size: 18px; padding: 0 10px; margin-left: -10px; font-weight:
 .color-purple { color: #805ad5; }
 .color-red { color: #ef4444; }
 .color-green { color: #84cc16; }
-
-/* --- Footer --- */
 .main-footer { background-color: #1a202c; color: #a0aec0; padding: 60px 0 20px 0; }
 .footer-top { display: grid; grid-template-columns: 2fr 1fr 1.5fr 1fr; gap: 40px; margin-bottom: 40px; }
 .footer-column h4 { color: white; font-size: 16px; margin-bottom: 20px; }
@@ -258,16 +212,5 @@ form legend { font-size: 18px; padding: 0 10px; margin-left: -10px; font-weight:
 .social-icons { display: flex; gap: 15px; }
 .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 20px; border-top: 1px solid #2d3748; font-size: 14px; }
 .legal-links a { margin-left: 20px; }
-
-/* --- Responsive Styles --- */
-@media (max-width: 992px) {
-    .stats-grid, .clubs-grid, .homepage-events-grid, .testimonials-grid, .gallery-grid, .values-grid, .impact-stats-grid, .features-grid, .footer-top { grid-template-columns: 1fr 1fr; }
-    .contact-grid { grid-template-columns: 1fr; }
-}
-@media (max-width: 768px) {
-    .nav-links { display: none; } /* On a real site, this would be replaced by a hamburger menu */
-    .stats-grid, .clubs-grid, .homepage-events-grid, .testimonials-grid, .gallery-grid, .values-grid, .impact-stats-grid, .features-grid, .footer-top, .mission-vision-grid, .form-row, .club-selection-grid { grid-template-columns: 1fr; }
-    .footer-bottom { flex-direction: column; text-align: center; gap: 10px; }
-    .legal-links { display: flex; gap: 15px; margin-left: 0; }
-    .legal-links a { margin-left: 0; }
-}
+@media (max-width: 992px) { .stats-grid, .clubs-grid, .homepage-events-grid, .testimonials-grid, .gallery-grid, .values-grid, .impact-stats-grid, .features-grid, .footer-top { grid-template-columns: 1fr 1fr; } .contact-grid { grid-template-columns: 1fr; } }
+@media (max-width: 768px) { .nav-links { display: none; } .stats-grid, .clubs-grid, .homepage-events-grid, .testimonials-grid, .gallery-grid, .values-grid, .impact-stats-grid, .features-grid, .footer-top, .mission-vision-grid, .form-row, .club-selection-grid { grid-template-columns: 1fr; } .footer-bottom { flex-direction: column; text-align: center; gap: 10px; } .legal-links { display: flex; gap: 15px; margin-left: 0; } .legal-links a { margin-left: 0; } }
